@@ -1,10 +1,13 @@
 import HeroVideo from '@/components/HeroVideo'
+import ItemBanner from '@/components/ItemBanner';
 import { ImagesSectionLatest } from '@/lib/constants';
 import Image from 'next/image'
-import React from 'react'
+import React, { useRef } from 'react'
 import { IoIosArrowBack } from "react-icons/io";
 
 const page = () => {
+
+
   return (
     <div className='flex flex-col gap-20 pt-[84px]'>
       <div className='relative'>
@@ -28,13 +31,11 @@ const page = () => {
         </div>
         <div className='overflow-x-auto flex gap-5 ps-12 pe-12 hideScrollbar'>
           {ImagesSectionLatest.map(item => (
-            <Image 
+            <ItemBanner 
               key={item.id}
               alt={item.alt}
-              src={item.href}
-              width={400}
-              height={500}
-              className='w-[30vw] h-fit object-contain'
+              imgHref={item.imgHref}
+              imgTitle={item.imgTitle}
             />
           ))}
         </div>

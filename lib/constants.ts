@@ -6,15 +6,18 @@ export type HeaderLink = {
 
 export type ImageSection = {
     id: number,
-    href: string,
-    alt: string
+    linkHref?: string,
+    imgHref: string,
+    alt: string,
+    imgTitle?: string,
 }
 
 export const HeaderLinks: HeaderLink[] = [
     {
         id: 1,
         name: 'News',
-        href: 'news'
+        href: 'news',
+
     },
     {
         id: 2,
@@ -36,22 +39,26 @@ export const HeaderLinks: HeaderLink[] = [
 export const ImagesSectionLatest: ImageSection[] = [
     {
         id: 1,
-        href: '/latest1.jpg',
-        alt: ''
+        imgHref: '/latest1.jpg',
+        alt: '',
+        linkHref: '/',
     },
     {
         id: 2,
-        href: '/latest2.png',
-        alt: ''
+        imgHref: '/latest2.png',
+        alt: '',
+        linkHref: '/',
     },
     {
         id: 3,
-        href: '/latest3.jpg',
-        alt: ''
+        imgHref: '/latest3.jpg',
+        alt: '',
+        linkHref: '/',
     },
     {
         id: 4,
-        href: '/latest4.jpg',
-        alt: ''
+        imgHref: '/latest4.jpg',
+        alt: '',
+        linkHref: '/',
     },
 ]
