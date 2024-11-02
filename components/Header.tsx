@@ -6,10 +6,11 @@ import { FaUser } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { IoBag } from "react-icons/io5";
 import SearchBar from './SearchBar';
+import { MdMenu } from "react-icons/md";
 
 const Header = () => {
   return (
-    <div className='fixed w-full top-5 px-5 h-10 z-10 '>
+    <div className='fixed w-full top-5 px-5 h-10 z-30 '>
         <div className='flex justify-between items-center w-full bg-dark-200 rounded-lg py-2 px-4'>
             <div className='w-[316px]'>
                 <Image 
@@ -21,7 +22,7 @@ const Header = () => {
                 />
             </div>
 
-            <section className='flex text-sm'>
+            <section className='md:flex text-sm hidden '>
                 {HeaderLinks.map(item => (
                     <Link
                         key={item.id}
@@ -33,7 +34,7 @@ const Header = () => {
                 ))}
             </section>
 
-            <section className='flex gap-1 items-center'>
+            <section className='md:flex hidden gap-1 items-center'>
                 <div className='w-[200px] mr-5'>
                     <SearchBar />
                 </div>
@@ -47,6 +48,9 @@ const Header = () => {
                     <FaUser className='text-gray-300' />            
                 </div>
             </section>
+
+            <MdMenu className='md:hidden text-xl hover:cursor-pointer text-gray-100' />
+
         </div>
     </div>
   )
