@@ -1,3 +1,5 @@
+import { queryOptions } from "@/components/ShopSideBar"
+
 export type HeaderLink = {
     id: number,
     name: string,
@@ -17,6 +19,16 @@ export type CarouselItem = {
     price?: number | null 
 }
 
+export type ProductCardData = {
+    id: number,
+    linkHref: string,
+    imgHref: string,
+    alt: string,
+    name: string,
+    description: string,
+    price: number
+}
+
 export type MainPageSection = {
     id: number,
     title: string,
@@ -32,8 +44,8 @@ export const HeaderLinks: HeaderLink[] = [
     },
     {
         id: 2,
-        name: 'Man',
-        href: 'man'
+        name: 'Men',
+        href: 'men'
     },
     {
         id: 3,
@@ -302,5 +314,94 @@ export const MainPageSections: MainPageSection[] = [
                 imgTitle: "Activity for you"
             },
         ]
+    },
+]
+
+export const newProducts: ProductCardData[] = [
+    {
+        id: 1,
+        imgHref: '/New1.jpg',
+        alt: '',
+        linkHref: '/',
+        name: 'Kobe X-Ray',
+        description: "Men's knitted hoodie",
+        price: 479.99,
+    },
+    {
+        id: 2,
+        imgHref: '/New2.jpg',
+        alt: '',
+        linkHref: '/',
+        name: 'Nike Dunk Low',
+        description: "Shoes for teenagers",
+        price: 419.99,           
+    },
+    {
+        id: 3,
+        imgHref: '/New3.jpg',
+        alt: '',
+        linkHref: '/',
+        name: 'Nike Air Max Plus',
+        description: "Men's shoes",
+        price: 839.99,            
+    },
+    {
+        id: 4,
+        imgHref: '/New4.jpg',
+        alt: '',
+        linkHref: '/',
+        name: 'Nike Air Force 1 LX',
+        description: "Men's shoes",
+        price: 619.99,
+    },
+    {
+        id: 5,
+        imgHref: '/New5.jpg',
+        alt: '',
+        linkHref: '/',
+        name: 'Nike Air Max 95',
+        description: "Men's shoes",
+        price: 839.99,
+    },
+    {
+        id: 6,
+        imgHref: '/New6.jpg',
+        alt: '',
+        linkHref: '/',
+        name: 'Nike Solo Swoosh',
+        description: "Men's knitted hoodie",
+        price: 479.99,
+    },
+]
+
+type FilterOption = {
+    displayName: string,
+    queryName: string,
+}
+
+type Filter = {
+    displayName: string,
+    queryName: keyof queryOptions,
+    options: FilterOption[],
+
+}
+
+export const Filters: Filter[] = [
+    {
+        displayName: 'Sex',
+        queryName: 'sex',
+        options: [{
+            displayName: 'Men',
+            queryName: 'men'
+        },
+        {
+            displayName: 'Women',
+            queryName: 'women'
+        },
+        {
+            displayName: 'Unisex',
+            queryName: 'unisex'
+        }
+    ],
     },
 ]

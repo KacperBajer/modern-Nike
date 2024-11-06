@@ -6,7 +6,7 @@ import React from 'react'
 const page = () => {
 
   return (
-    <div className='flex flex-col gap-20 pt-[84px]'>
+    <div className='flex flex-col gap-20'>
       
       <div className='relative'>
         <div className='sm:block hidden'><Video href='/heroVideo.mp4' /></div>
