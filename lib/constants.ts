@@ -59,6 +59,30 @@ export const HeaderLinks: HeaderLink[] = [
     },
 ]
 
+export const NewsHeaderLinks: HeaderLink[] = [
+    {
+        id: 1,
+        name: 'Shoes',
+        href: '/news/shoes',
+
+    },
+    {
+        id: 2,
+        name: 'Pants',
+        href: '/news/pants'
+    },
+    {
+        id: 3,
+        name: 'T-shirts',
+        href: '/news/tshirts'
+    },
+    {
+        id: 4,
+        name: 'Sweatshirts and jackets',
+        href: '/news/sweatshirtsandjackets'
+    },
+]
+
 export const MainPageSections: MainPageSection[] = [
     {
         id: 1,

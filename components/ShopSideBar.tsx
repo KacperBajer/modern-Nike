@@ -4,7 +4,6 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import CheckBox from './CheckBox'
 import { Filters } from '@/lib/constants'
-import { getProducts } from '@/lib/getProdcuts'
 
 export type queryOptions = {
   sex?: string[],
