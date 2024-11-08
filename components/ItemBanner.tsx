@@ -30,7 +30,7 @@ const BannerTemplate = ({alt, imgHref, imgSubtitle, imgTitle, imgButtonText, nam
         <>
             <div className='relative w-full'>
                 <Image 
-                    alt={alt}
+                    alt={alt || ""}
                     src={imgHref}
                     width={400}
                     height={400}

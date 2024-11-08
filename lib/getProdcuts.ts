@@ -4,12 +4,11 @@ import conn from "./db";
 
 export const getProducts = async () => {
     try {
-        const query = 'SELECT * FROM products'
-        const result = await (conn as Pool).query(
-            query
-        );
-        console.log(result)
+        const query = `SELECT * FROM products`;
+        const result = await (conn as Pool).query(query);
+        console.log(result);
+        return result
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }

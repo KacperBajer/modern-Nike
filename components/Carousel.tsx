@@ -5,8 +5,8 @@ import ItemBanner from './ItemBanner'
 import { CarouselItem } from '@/lib/constants'
 
 type Props = {
-    title: string,
-    items: CarouselItem[]
+  title: string,
+  items: CarouselItem[]
 }
 
 const Carousel = ({title, items}: Props) => {
@@ -73,7 +73,7 @@ const Carousel = ({title, items}: Props) => {
             <ItemBanner 
               key={item.id}
               alt={item.alt}
-              imgHref={item.imgHref}
+              imgHref={item.image || (item.imgHref as string)}
               imgTitle={item.imgTitle}
               imgSubtitle={item.imgSubtitle}
               linkHref={item.linkHref}
